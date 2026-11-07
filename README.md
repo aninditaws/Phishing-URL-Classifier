@@ -1,50 +1,70 @@
-# IF3070_TugasBesar2: Implementasi Algoritma Pembelajaran Mesin
+# Phishing URL Classifier
 
-## Tentang Proyek
-Tugas Besar 2 IF3070 Dasar Inteligensi Buatan bertujuan untuk memberikan pengalaman langsung dalam menerapkan algoritma pembelajaran mesin pada permasalahan nyata dengan mengimplementasikan algoritma K-Nearest Neighbour (KNN) dan Gaussian Naive Bayes. Implementasi ini dilakukan dengan menggunakan Python dan Jupyter Notebook.
+A Python/Jupyter team project comparing custom K-Nearest Neighbour (KNN) and Gaussian Naive Bayes classifiers with scikit-learn implementations on phishing URL data.
 
-## Implementasi Proyek
-- Split Data
-- Data Cleaning & Preprocessing
-- Modeling & Validation (KNN & Gaussian Naive Bayes)
+**Anindita's contribution:** Data cleaning, preprocessing, and pipeline assembly. Classifier implementation responsibilities are listed in the contribution table below.
 
-## Cara Kompilasi Program
-1. Clone Repository Github dan cd ke Folder src
+[Portfolio case study](https://aninditaws.github.io/projects/phishing-classifier/)
+
+## Project scope
+
+- Prepare training/test data and handle missing values.
+- Apply preprocessing and compare classification approaches.
+- Evaluate predictions using classification metrics in the notebook.
+
+This is an academic project for IF3070 Dasar Inteligensi Buatan at ITB. Results depend on the dataset, split, and preprocessing choices; this repository does not establish production phishing-detection performance.
+
+## Run the notebook
+
+Requires Python, pip, and Jupyter. Run the notebook from `src/` so the relative `../data/` paths resolve correctly.
+
 ```bash
-git clone https://github.com/aninditaws/IF3070_TugasBesar2.git
+git clone https://github.com/aninditaws/Phishing-URL-Classifier.git
+cd Phishing-URL-Classifier
+python -m venv .venv
+```
+
+Activate the environment:
+
+```bash
+# macOS / Linux
+source .venv/bin/activate
+```
+
+```powershell
+# Windows PowerShell
+.venv\\Scripts\\Activate.ps1
+```
+
+Install the notebook's third-party dependencies, then start Jupyter:
+
+```bash
+python -m pip install notebook pandas numpy scikit-learn imbalanced-learn
 cd src
+jupyter notebook IF3070_DAI_TugasBesar2_finalboss.ipynb
 ```
-2. Pastikan Anda sudah mengunduh Python, Jupyter, Notebook, dan `pip`
-```bash
-pip install jupyter
-pip install notebook
-python -m ensurepip --upgrade
-```
-3. Setup Virtual Environment
-```bash
-python -m venv env
-env\Scripts\activate
-```
-4. Run File Jupyter Notebook `IF3070_DAI_TugasBesar2_finalboss.ipynb`
 
-## Struktur Program
-```bash
-│ README.md
-│
-├── data
-│   ├── sample_submission.csv   
-│   ├── test.csv               
-│   └── train.csv              
-│
-├── docs
-│   └── 
-│
-├── src
-│   └── IF3070_DAI_TugasBesar2_finalb.ipynb   
-│
-└───
+The repository does not pin dependency versions. These commands describe the notebook's imports and file layout; package compatibility and a complete notebook execution should be checked in your environment. Full runs can take time for the custom models.
+
+## Repository structure
+
+```text
+README.md
+data/
+  sample_submission.csv
+  test.csv
+  train.csv
+doc/
+  Tubes2_finalboss.pdf
+models/
+  gnb.pkl
+  knn.pkl
+src/
+  IF3070_DAI_TugasBesar2_finalboss.ipynb
 ```
-## Pembagian Tugas
+
+## Team contributions
+
 | NIM      | Nama Lengkap           | Tugas                                                                                     |
 |----------|------------------------|-------------------------------------------------------------------------------------------|
 | 18222113 | Angelica Aliwinata     | Modelling Naive Bayes                                                                     |
